@@ -1,11 +1,11 @@
 {
-	"name": "NZTA/googlemap-leafletfield",
+	"name": "nzta/googlemap-leafletfield",
 	"description": "Provides a form field type allowing users to draw features on a map, the features are stored as geoJSON objects in a single database field",
 	"type": "silverstripe-module",
-	"homepage": "https://github.com/NZTA/googlemap-leafletfield",
+	"homepage": "https://github.com/nzta/googlemap-leafletfield",
 	"keywords": ["googlemap", "leaflet", "map"],
 	"support": {
-		"issues": "https://github.com/NZTA/googlemap-leafletfield/issues"
+		"issues": "https://github.com/nzta/googlemap-leafletfield/issues"
 	},
 	"authors": [
 		{
