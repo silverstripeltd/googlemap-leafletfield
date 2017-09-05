@@ -5,7 +5,7 @@ Provides a form field type allowing users to draw features on a map, the feature
 
 ## Installation
 
-    $ composer require benmanu/silverstripe-leafletfield
+    $ composer require NZTA/googlemap-leafletfield
 
 
 ## Basic Usage
@@ -29,7 +29,7 @@ Define default field options through config.
 
     LeafletField:
       map_options:
-        center: 
+        center:
           latitude: "-40.866119"
           longitude: "174.143780"
         zoom: 5
