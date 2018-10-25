@@ -1,6 +1,6 @@
 <?php
 
-namespace NZTA\LeafletField;
+namespace NZTA\LeafletField\Forms;
 
 use SilverStripe\Core\Convert;
 use SilverStripe\Core\Environment;
@@ -69,6 +69,7 @@ class LeafletField extends FormField
 
     /**
      * Set up child hidden fields.
+     * @param string name
      *
      * @return FieldList
      */
@@ -159,7 +160,7 @@ class LeafletField extends FormField
     /**
      * Return additional geoJsonlayers style to display on the map.
      *
-     * @return String
+     * @return string
      */
     public function getGeoJsonlayersStyleJS()
     {
@@ -180,7 +181,10 @@ class LeafletField extends FormField
     }
 
     /**
-     * {@inheritdoc}
+     * @param array $value
+     * @param $data
+     *
+     * @return $this|FormField
      */
     public function setValue($value, $data = null)
     {
@@ -194,7 +198,7 @@ class LeafletField extends FormField
     }
 
     /**
-     * {@inheritdoc}
+     * @param DataObjectInterface $record
      */
     public function saveInto(DataObjectInterface $record)
     {
