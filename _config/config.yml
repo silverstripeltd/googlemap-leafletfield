@@ -1,7 +1,7 @@
 ---
 Name: leafletfield
 ---
-LeafletField:
+NZTA\LeafletField\Forms\LeafletField:
   map_options:
     center: 
       latitude: "-40.866119"

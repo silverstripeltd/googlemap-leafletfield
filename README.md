@@ -10,11 +10,15 @@ Provides a form field type allowing users to draw features on a map, the feature
 
 ## Basic Usage
 
+Import the field
+
+    use NZTA\LeafletField\LeafletField;
+
 Create a text database field to store the geojson value.
 
-    public static $db = array(
+    public static $db = [
         'Geometry' => 'Text',
-    );
+    ];
 
 Create a LeafletField, passing through the object that you want to store the value against.
 
@@ -27,7 +31,7 @@ Create a LeafletField, passing through the object that you want to store the val
 
 Define default field options through config.
 
-    LeafletField:
+    NZTA\LeafletField\LeafletField:
       map_options:
         center:
           latitude: "-40.866119"
@@ -48,44 +52,39 @@ Define default field options through config.
 Define custom options for individual field instances (overrides defaults).
 
     $field->setLimit(1); // Limit the amount of objects the field can contain.
-    $field->setMapOptions(array(
-        'center' => array(
+    $field->setMapOptions([
+        'center' => [
             'latitude' => '-40.866119',
             'longitude' => '174.143780'
-        ),
+        ],
         'zoom' => 5
-    ));
-    $field->setDrawOptions(array(
-        'polyline' => array(
-            'shapeOptions' => array(
+    ]);
+    $field->setDrawOptions([
+        'polyline' => [
+            'shapeOptions' => [
                 'color' => '#269634'
-            )
-        ),
-        'polygon' => array(
+            ]
+        ],
+        'polygon' => [
             'allowIntersection' => false,
-            'drawError' => array(
+            'drawError' => [
                 'color' => '#b00b00',
                 'timeout' => 1000
-            )
-        ),
+            ]
+        ],
         'rectangle' => false,
         'circle' => false
-    ));
+    ]);
 
 The draw options are set using the same structure as [Leaflet.draw options](https://github.com/Leaflet/Leaflet.draw#drawoptions).
 
-
-## Maintainer Contacts
-
-* Ben Manu <ben@silverstripe.com>
-
 ## Requirements
 
-* SilverStripe 3.1
+* SilverStripe 4.0
 
 ## Project Links
-* [GitHub Project Page](https://github.com/benmanu/silverstripe-leafletfield)
-* [Issue Tracker](https://github.com/benmanu/silverstripe-leafletfield/issues)
+* [GitHub Project Page](https://github.com/NZTA/silverstripe-leafletfield)
+* [Issue Tracker](https://github.com/NZTA/silverstripe-leafletfield/issues)
 * [Leaflet](http://leafletjs.com/)
 * [Leaflet.draw](https://github.com/Leaflet/Leaflet.draw)
 * [GeoJSON](http://geojson.org/geojson-spec.html)

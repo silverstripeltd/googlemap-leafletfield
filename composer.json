@@ -1,22 +1,36 @@
 {
-	"name": "nzta/googlemap-leafletfield",
-	"description": "Provides a form field type allowing users to draw features on a map, the features are stored as geoJSON objects in a single database field",
-	"type": "silverstripe-module",
-	"homepage": "https://github.com/nzta/googlemap-leafletfield",
-	"keywords": ["googlemap", "leaflet", "map"],
-	"support": {
-		"issues": "https://github.com/nzta/googlemap-leafletfield/issues"
-	},
-	"authors": [
-		{
-			"name": "Robby",
-			"email": "channels@nzta.govt.nz"
-		}
-	],
-	"require": {
-		"silverstripe/framework": "~3.1"
-	},
-	"extra": {
-		"installer-name": "leafletfield"
-	}
+    "name": "nzta/googlemap-leafletfield",
+    "description": "Provides a form field type allowing users to draw features on a map, the features are stored as geoJSON objects in a single database field",
+    "type": "silverstripe-vendormodule",
+    "homepage": "https://github.com/nzta/googlemap-leafletfield",
+    "keywords": [
+        "silverstripe",
+        "leaflet",
+        "map"
+    ],
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/nzta/googlemap-leafletfield/issues"
+    },
+    "authors": [
+        {
+            "name": "Robby",
+            "email": "channels@nzta.govt.nz"
+        }
+    ],
+    "require": {
+        "silverstripe/vendor-plugin": "^1.0",
+        "silverstripe/cms": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "NZTA\\LeafletField\\": "src/"
+        }
+    },
+    "extra": {
+        "installer-name": "leafletfield",
+        "expose": [
+            "client"
+        ]
+    }
 }
